@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-br"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" href="styles.css"> 
+  <title>Conversão de graus</title> 
+ <style type="text/css" id="dcoder_stylesheet">html {
+  margin: 20%;
+  font-family: sans-serif;
+  padding: 5%;
+  background-color: rgba(220,220,220,80%);
+}
+p {
+  text-align: center;
+}
+button {
+  margin-left: 32%;
+}
+</style></head> 
+ <body> 
+  <p>Converta:</p> 
+  <input type="text" class="textbox"> 
+  <p>Para:</p> 
+  <input type="radio" class="cBtn" name="unidade"> <label>Celsius</label> 
+  <br> 
+  <input type="radio" class="fBtn" name="unidade"> <label>Fahrenheit</label> 
+  <br> 
+  <br> <button class="btn">converter</button> 
+  <p class="text"></p> 
+  <script src="index.js"></script> 
+ 
+<script type="text/javascript" id="dcoder_script">let textbox = document.querySelector(".textbox");
+let cBtn = document.querySelector(".cBtn");
+let fBtn = document.querySelector(".fBtn");
+let btn = document.querySelector(".btn");
+let text = document.querySelector(".text");
+
+btn.onclick = () => {
+  let temp;
+  
+  if(cBtn.checked) {
+    temp = textbox.value;
+    temp = Number(temp);
+    temp = paraC(temp);
+    text.innerHTML = temp + "°C";
+ } else if(fBtn.checked) {
+    temp = textbox.value;
+    temp = Number(temp);
+    temp = paraF(temp);
+    text.innerHTML = temp + "°F";
+ } else {
+    text.innerHTML = "Por favor escolha a conversão!"
+ }
+};
+
+
+
+function paraC(temp) {
+  return (temp - 32) * (5/9);
+}
+function paraF(temp) {
+  return (temp * 9/5) + 32;
+}</script></body></html>
