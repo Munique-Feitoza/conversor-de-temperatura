@@ -1,0 +1,12 @@
+html {
+  margin: 20%;
+  font-family: sans-serif;
+  padding: 5%;
+  background-color: rgba(220,220,220,80%);
+}
+p {
+  text-align: center;
+}
+button {
+  margin-left: 32%;
+}
