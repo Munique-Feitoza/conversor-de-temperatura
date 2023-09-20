@@ -10,3 +10,21 @@ p {
 button {
   margin-left: 32%;
 }
+footer {   
+     position: fixed;  
+     bottom: 0px;  
+     right: 0px;  
+     left: 0px;  
+     padding: 5px;   
+  
+}  
+#texto1 {   
+     color: black;  
+     font-size: 9px;  
+     padding: 1% 0 0 3%;   
+}   
+#texto2 {   
+     color: black;  
+     font-size: 9px;  
+     padding: 0 0 1% 70%;   
+}
